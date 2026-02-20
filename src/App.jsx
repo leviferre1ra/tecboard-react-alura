@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import { Banner } from './componentes/Banner'
 import { CardEvento } from './componentes/CardEvento'
@@ -7,6 +8,7 @@ import { Tema } from './componentes/Tema'
 // no react, componentes são FUNÇÕES
 
 function App() {
+
 
   const temas = [
     {
@@ -35,31 +37,58 @@ function App() {
     },
   ]
 
-  const eventos = [
+  const [eventos, setEventos] = useState([
     {
       capa: '../public/Imagem.png',
       tema: temas[0],
       data: new Date(),
       titulo: 'Mulheres no Front'
     }
-  ]
+  ])
 
+  function adicionarEvento(evento) {
+    // eventos.push(evento)
+    // console.log('eventos =>', eventos)
+    setEventos([...eventos, evento])
+  }
+
+  // renderização condicional usando && 
   return (
     <main>
       <header>
         <img src="/logoTecboard.png" alt="" />
       </header>
       <Banner />
-      <FormularioDeEvento />
+      <FormularioDeEvento
+        temas={temas}
+        aoSubmeter={adicionarEvento}
+      />
 
-      {temas.map(function (item) {
-        return (
-          <section key={item.id}>
-            <Tema tema={item} />
-            <CardEvento evento={eventos[0]}/>
-          </section>
-        )
-      })}
+      <section className='container'>
+        {temas.map(function (tema) {
+          if (!eventos.some(function (evento) {
+            return evento.tema.id == tema.id
+          })) {
+            return null
+          }
+          return (
+            <section key={tema.id}>
+              <Tema tema={tema} />
+              <div className="eventos">
+                {eventos.filter(function (evento) {
+                  return evento.tema.id == tema.id
+                })
+                  .map(function (evento, index) {
+                    return <CardEvento evento={evento} key={index} />
+
+                  })}
+              </div>
+            </section>
+          )
+        })}
+      </section>
+
+
 
       {/* <section>
         <Tema tema={temas[1]} />
