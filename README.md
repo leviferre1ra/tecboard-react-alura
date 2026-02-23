@@ -1,16 +1,21 @@
-# React + Vite
+# React + Vite | projeto de estudo feito acompanhando as aulas da carreira de Front-End da Alura
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Acesse o site em: https://tecboard-react-alura.vercel.app/
 
-Currently, two official plugins are available:
+O objetivo foi estudar em React 19:
+- JSX
+- Componentes
+- Form Action
+- useState
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sobre o projeto | Tecboard
+Tecboard é um site responsivo e gratuito com o intuito de ser um hub de eventos de tecnologia, você pode ver os eventos que estão cadastrados e cadastrar um novo evento adicionando título, imagem, data e tema do evento. 
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img width="1890" height="944" alt="image" src="https://github.com/user-attachments/assets/038eadad-a049-4334-b2ed-ff4b57cb2055" />
+<img width="1890" height="943" alt="image" src="https://github.com/user-attachments/assets/a4742f11-30be-407b-99a5-daeb8ef749a2" />
+<img width="1891" height="941" alt="image" src="https://github.com/user-attachments/assets/f9d9a761-832c-4a66-9ef1-f8e260fe4b4a" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
