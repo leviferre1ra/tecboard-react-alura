@@ -39,7 +39,7 @@ function App() {
 
   const [eventos, setEventos] = useState([
     {
-      capa: '../public/Imagem.png',
+      capa: 'https://img.freepik.com/free-vector/gradient-coding-developers-logo_23-2148809440.jpg',
       tema: temas[0],
       data: new Date(),
       titulo: 'Mulheres no Front'
